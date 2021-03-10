@@ -772,7 +772,7 @@ h2.article-head {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 350px;
+  height: 200px;
 }
 #about-banner:after {
   position: absolute;
@@ -787,7 +787,7 @@ h2.article-head {
 }
 @media screen and (max-width: 480px) {
   #about-banner {
-    height: 250px;
+    height: 150px;
   }
 }
 .author {
@@ -846,23 +846,14 @@ h2.article-head {
   transition: opacity 0.2s;
   opacity: 0.6;
 }
-.author .share-icons .icon-weibo {
-  color: #e6162d;
+.author .share-icons .icon-facebook {
+  color: #4267b2;
 }
 .author .share-icons .icon-github {
   color: #333;
 }
-.author .share-icons .icon-linkedin {
-  color: #0077b5;
-}
-.author .share-icons .icon-zhihu {
-  color: #0767c8;
-}
-.author .share-icons .icon-twitter {
-  color: #2aa9e0;
-}
-.author .share-icons .icon-douban {
-  color: #00b51d;
+.author .share-icons .icon-gmail {
+  color: #ea4335;
 }
 .project-app {
   max-width: 1020px;
