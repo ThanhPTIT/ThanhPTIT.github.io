@@ -10,7 +10,7 @@
   
   <title>
     
-      Tags | Wolf
+      Wolf
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -117,53 +117,33 @@
 </header>
 
     <div id="article-banner">
-  <h2>Tags</h2>
+  <h2>Archives</h2>
 </div>
-<main class="app-body">
-  <div id="tag-cloud">
+<main class="app-body" id="archives">
+  
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2021
+  </h1>
+  <div class="section-list">
     
-      <a class="tag2" data-name="tag-ios">ios</a>
     
-      <a class="tag2" data-name="tag-swift">swift</a>
+      <div class="section-list-item">
+        <a href="/2021/03/10/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">03-10</p>
+      </div>
     
   </div>
+</section>
   
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-ios">ios</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2021/03/10/hello-world/">Hello World</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-swift">swift</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2021/03/10/hello-world/">Hello World</a>
-          </li>
-        </ul>
-        
-    </div>
-    
 </main>
 
 <script>
   (function () {
-    $('#article-banner').geopattern()
-    $('.header').removeClass('fixed-header')
-
-    var tag = location.hash.replace('#', '')
-    if (tag) {
-      var tagId = "#tag-" + tag;
-      $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
-      }, 400)
-    }
+    $('#article-banner').geopattern();
+    $('.header').removeClass('fixed-header');
   })();
 </script>
     <div class="scroll-top">
