@@ -122,9 +122,11 @@
 <main class="app-body">
   <div id="tag-cloud">
     
-      <a class="tag2" data-name="tag-ios">ios</a>
+      <a class="tags0" data-name="tag-ios">ios</a>
+      <!-- <a class="tags" data-name="tag-ios">ios</a> -->
     
-      <a class="tag2" data-name="tag-swift">swift</a>
+      <a class="tags2" data-name="tag-swift">swift</a>
+      <!-- <a class="tags" data-name="tag-swift">swift</a> -->
     
   </div>
   
@@ -154,6 +156,9 @@
 
 <script>
   (function () {
+    $('.tags0').css('background', '#bbe')
+    $('.tags1').css('background', '#9cb2e1')
+    $('.tags2').css('background', 'rgba(0, 133, 161, 0.8)')
     $('#article-banner').geopattern()
     $('.header').removeClass('fixed-header')
 
