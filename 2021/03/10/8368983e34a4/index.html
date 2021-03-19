@@ -138,7 +138,7 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Với các CMS phổ biến hiện nay như: wordpress, ghost, joomla… việc tạo một trang blog cá nhân trở nên đơn giản. Tuy nhiên các CMS này khá cồng kềnh để cài đặt nên sẽ khiến bạn mất một thời gian để làm quen và tìm hiểu. Ngoài ra bạn cũng phải học cách sử dụng một số plugin và themes để đảm bảo trang web được hiển thị một cách tốt nhất. <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> sẽ giúp giải quyết các khó khăn đó.</p>
+    <section class="markdown-content"><p>Với các CMS phổ biến hiện nay như: wordpress, ghost, joomla… việc tạo một trang blog cá nhân trở nên đơn giản. Tuy nhiên các CMS này khá cồng kềnh trong việc cài đặt do đó sẽ khiến bạn mất một thời gian để làm quen và tìm hiểu. Ngoài ra bạn cũng phải học cách sử dụng một số plugin và themes để đảm bảo trang web được hiển thị một cách tốt nhất. <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> sẽ giúp giải quyết các khó khăn đó.</p>
 <span id="more"></span>
 
 <h2 id="Hexo-Blog-Framework"><a href="#Hexo-Blog-Framework" class="headerlink" title="Hexo - Blog Framework"></a>Hexo - Blog Framework</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> là một blog framework mạnh mẽ hoạt động theo cơ chế Static Site Generator (<a target="_blank" rel="noopener" href="https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/">SSG</a>) giúp tạo ra các static web một cách đơn giản và nhanh chóng. Bạn sẽ không cần bỏ ra quá nhiều thời gian để cài đặt và bảo trì, chỉ cần chạy các <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Command-line_interface">Command-line</a> và tận hưởng thành quả. Bạn có thể viết bài bằng <a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown</a> hoặc các markup languages khác. Hexo hỗ trợ rất nhiều plugins và themes được tạo ra bởi các lập trình viên. Hexo tự động generate ra các static file nên thật dễ dàng để deploy lên GitHub Pages, Heroku hay các nền tảng khác.</p>
@@ -165,13 +165,14 @@
 <p>Sửa file <code>_config.yml</code> sau đó restart server <code>hexo server</code> để cập nhật giao diện.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">themes: vexo</span><br></pre></td></tr></table></figure>
 
+<p>Ngoài danh sách themes phong phú, đa dạng thì Hexo có rất nhiều các <a target="_blank" rel="noopener" href="https://hexo.io/plugins/">plugin</a> giúp bạn có thể tuỳ chỉnh trang blog của mình theo ý muốn.</p>
 <h2 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h2><p><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a> là dịch vụ lưu trữ static web trực tiếp thông qua <a target="_blank" rel="noopener" href="https://github.com/">Github</a>. Static web được tạo ra bởi Hexo sẽ được push lên Github Pages và được truy cập bằng đường dẫn dưới định dạng <code>&lt;github-username&gt;.github.io</code>. Github Pages là một giải pháp tuyệt vời giúp nhanh chóng deploy một trang web hoàn chỉnh khi mà bạn không có host và domain. Ngoài Github Pages bạn có thể lựa chọn các platform khác như: Heroku, Google Cloud, Firebase…</p>
 <h3 id="Tao-Github-Pages"><a href="#Tao-Github-Pages" class="headerlink" title="Tạo Github Pages"></a>Tạo Github Pages</h3><p>Việc tạo Github Pages khá đơn giản. Trước tiên bạn phải có 1 tài khoản <a target="_blank" rel="noopener" href="https://github.com/">Github</a>. Sau đó tạo mới một repository với định dạng <code>&lt;github-username&gt;.github.io</code>. Tại file <code>_config.yml</code>, chỉnh sửa lại thông tin deploy.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;ThanhPTIT&#x2F;thanhptit.github.io.git</span><br></pre></td></tr></table></figure>
 
-<p> Tại bước này bạn có thể truy cập vào trang <code>&lt;github-username&gt;.github.io</code>. Tất nhiên chúng ta sẽ nhận được một lỗi <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/HTTP_404">404 Not Found</a> vì repository hiện tại chưa chứa bất cứ static web nào cả. </p>
+<p> Tại bước này bạn có thể truy cập vào trang <code>&lt;github-username&gt;.github.io</code>. Tất nhiên chúng ta sẽ nhận được một lỗi <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/HTTP_404">404 Not Found</a> vì repository hiện tại chưa chứa bất kỳ static web nào cả. </p>
 <p> <img src="/image/github-pages-not-found.png" alt="Github Pages Not Found"></p>
-<p> Nhiệm vụ tiếp theo là generate các static file và deploy chúng</p>
+<p> Nhiệm vụ tiếp theo là generate các static file và deploy chúng.</p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>Các static file bao gồm html, css, js, image… sẽ tự động được tạo ra trong thư mục <code>/public</code></p>
@@ -181,8 +182,11 @@
 <blockquote>
 <p>Quá trình deploy thường sẽ mất một khoảng thời gian nhỏ nên đừng lo lắng khi thấy blog của bạn không hiển thị ngay lập tức.</p>
 </blockquote>
-<p>Sau tất cả các bước trên chúng ta đã có một trang cá nhân hoàn chỉnh. Từ nay mỗi khi muốn cập nhật blog của mình bạn chỉ cần chạy Command-line.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></section>
+<p>Sau tất cả các bước trên chúng ta đã có một trang cá nhân hoàn chỉnh. Từ đây mỗi khi muốn cập nhật blog của mình, bạn chỉ cần chạy Command-line.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tong-Ket"><a href="#Tong-Ket" class="headerlink" title="Tổng Kết"></a>Tổng Kết</h2><p>Như vậy chỉ với các Command-line, trong thời gian ngắn chúng ra đã có thể tạo ra một trang web hoàn chỉnh. Hy vọng bài viết này có ích với bạn. Nếu gặp khó khăn trong quá trình cài đặt hãy liên hệ <a href="/about">Wolf</a> để được giúp đỡ.</p>
+</section>
     <!-- Tags START -->
     
       <div class="tags">
@@ -223,7 +227,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hexo-Blog-Framework"><span class="toc-nav-text">Hexo - Blog Framework</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cai-dat-Hexo"><span class="toc-nav-text">Cài đặt Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Viet-bai"><span class="toc-nav-text">Viết bài</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hexo-themes"><span class="toc-nav-text">Hexo themes</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Github-Pages"><span class="toc-nav-text">Github Pages</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Tao-Github-Pages"><span class="toc-nav-text">Tạo Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generate-static-files"><span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deploy-to-Github-Pages"><span class="toc-nav-text">Deploy to Github Pages</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hexo-Blog-Framework"><span class="toc-nav-text">Hexo - Blog Framework</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cai-dat-Hexo"><span class="toc-nav-text">Cài đặt Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Viet-bai"><span class="toc-nav-text">Viết bài</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hexo-themes"><span class="toc-nav-text">Hexo themes</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Github-Pages"><span class="toc-nav-text">Github Pages</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Tao-Github-Pages"><span class="toc-nav-text">Tạo Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generate-static-files"><span class="toc-nav-text">Generate static files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deploy-to-Github-Pages"><span class="toc-nav-text">Deploy to Github Pages</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Tong-Ket"><span class="toc-nav-text">Tổng Kết</span></a></li></ol>
     
   </div>
 </aside>
