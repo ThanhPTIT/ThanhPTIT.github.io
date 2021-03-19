@@ -138,8 +138,32 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="Hexo-Framework"><a href="#Hexo-Framework" class="headerlink" title="Hexo Framework"></a>Hexo Framework</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> là một blog framework mạnh mẽ được viết bằng Nodejs, hoạt động theo cơ chế Static Site Generator (<a target="_blank" rel="noopener" href="https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/">SSG</a>) giúp tạo ra các static web. Thật dễ dàng để tạo ra một trang blog bằng các CMS như: wordpress, ghost, joomla… Tuy nhiên cũng có các </p>
-</section>
+    <section class="markdown-content"><p>Ngày nay thật dễ dàng để tạo ra một trang blog bằng các <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a> như: wordpress, ghost, joomla… Các CMS này khá cồng kềnh để cài đặt nên sẽ khiến bạn mất một thời gian để làm quen và tìm hiểu. Ngoài ra bạn cũng phải học cách sử dụng một số plugin và themes để đảm bảo trang web được hiển thị một cách tốt nhất. <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> sẽ giúp bạn giải quyết các khó khăn đó.</p>
+<span id="more"></span>
+
+<h2 id="Hexo-Blog-Framework"><a href="#Hexo-Blog-Framework" class="headerlink" title="Hexo - Blog Framework"></a>Hexo - Blog Framework</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> là một blog framework mạnh mẽ hoạt động theo cơ chế Static Site Generator (<a target="_blank" rel="noopener" href="https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/">SSG</a>) giúp tạo ra các static web một cách đơn giản và nhanh chóng. Bạn sẽ không cần bỏ ra quá nhiều thời gian để cài đặt và bảo trì, chỉ cần chạy các <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Command-line_interface">Command-line</a> và tận hưởng thành quả. Bạn có thể viết bài bằng Markdown hoặc các markup languages khác. Hexo hỗ trợ hơn 300 themes với chủ đề đa dạng đồng thời bạn cũng có thể tạo ra themes của riêng mình. Hexo tự động generate ra các static file nên thật dễ dành để deploy lên GitHub Pages, Heroku hay các nền tảng khác.</p>
+<blockquote>
+<p>Hexo is a fast, simple &amp; powerful blog framework.</p>
+</blockquote>
+<h3 id="Cai-dat-Hexo"><a href="#Cai-dat-Hexo" class="headerlink" title="Cài đặt Hexo"></a>Cài đặt Hexo</h3><p>Hãy tham khảo <a target="_blank" rel="noopener" href="https://hexo.io/docs/">document</a> của Hexo để cài đặt.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init my_blog</span><br><span class="line">$ <span class="built_in">cd</span> my_blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>Một project Hexo sẽ được tạo ra với cấu trúc:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>Port mặc định của Hexo là 4000, mở đường dẫn <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> bằng trình duyệt, bạn sẽ thấy blog của mình đã được tạo ra.</p>
+<h3 id="Viet-bai"><a href="#Viet-bai" class="headerlink" title="Viết bài"></a>Viết bài</h3><p>Hexo hỗ trợ viết bài với định dạng Markdown.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My First Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>File <code>/source/_posts/my-first-post.md</code> sẽ được tạo ra để chứa nội dung bài viết của bạn. Về bản chất các file html tĩnh sẽ được generate từ các file .md tương ứng.</p>
+<h3 id="Hexo-themes"><a href="#Hexo-themes" class="headerlink" title="Hexo themes"></a>Hexo themes</h3><p>Hexo có rất nhiều <a target="_blank" rel="noopener" href="https://hexo.io/themes/">themes</a> với nhiều chủ đề khác nhau được viết bởi các lập trình viên trên toàn thế giới. Nếu muốn bạn cũng có thể tự tạo cho mình một theme và chia sẻ nó với người khác. Mình sẽ dùng <a target="_blank" rel="noopener" href="https://github.com/yanm1ng/hexo-theme-vexo">Vexo</a> để làm mới giao diện cho blog.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;your-hexo-folder&gt;</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo</span><br><span class="line">$ cp -R themes/vexo/_source/* <span class="built_in">source</span>/</span><br></pre></td></tr></table></figure>
+
+<p>Vexo sẽ được clone trong thư mục <code>/theme/vexo</code> với cấu trúc:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── languages</span><br><span class="line">├── layout</span><br><span class="line">├── scripts</span><br><span class="line">└── source</span><br></pre></td></tr></table></figure>
+
+<p>Sửa file <code>_config.yml</code> sau đó restart server <code>hexo server</code> để cập nhật theme.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">themes: vexo</span><br></pre></td></tr></table></figure></section>
     <!-- Tags START -->
     
       <div class="tags">
@@ -162,19 +186,6 @@
     <!-- Tags END -->
     <!-- NAV START -->
     
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/2021/03/10/602df11e53fd/">
-        <span class="nav-arrow">← </span>
-        
-          Hello World
-        
-      </a>
-    
-    
-  </div>
-
     <!-- NAV END -->
     <!-- 打赏 START -->
     
@@ -193,7 +204,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hexo-Framework"><span class="toc-nav-text">Hexo Framework</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hexo-Blog-Framework"><span class="toc-nav-text">Hexo - Blog Framework</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cai-dat-Hexo"><span class="toc-nav-text">Cài đặt Hexo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Viet-bai"><span class="toc-nav-text">Viết bài</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hexo-themes"><span class="toc-nav-text">Hexo themes</span></a></li></ol></li></ol>
     
   </div>
 </aside>
