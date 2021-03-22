@@ -146,18 +146,18 @@
 <p>Hexo is a fast, simple &amp; powerful blog framework.</p>
 </blockquote>
 <h3 id="Cai-dat-Hexo"><a href="#Cai-dat-Hexo" class="headerlink" title="Cài đặt Hexo"></a>Cài đặt Hexo</h3><p>Tham khảo <a target="_blank" rel="noopener" href="https://hexo.io/docs/">document</a> của Hexo.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init my_blog</span><br><span class="line">$ <span class="built_in">cd</span> my_blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init my_blog</span><br><span class="line"><span class="built_in">cd</span> my_blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 <p>Một project Hexo sẽ được tạo ra với cấu trúc:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 
 <p>Port mặc định của Hexo là 4000, mở đường dẫn <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> bằng trình duyệt, bạn sẽ thấy blog của mình đã được tạo ra.</p>
 <h3 id="Viet-bai"><a href="#Viet-bai" class="headerlink" title="Viết bài"></a>Viết bài</h3><p>Hexo hỗ trợ viết bài với định dạng <a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown</a>.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My First Post&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My First Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>File <code>/source/_posts/my-first-post.md</code> sẽ được tạo ra để chứa nội dung bài viết của bạn. Về bản chất các file html tĩnh sẽ được generate từ các file .md tương ứng.</p>
 <h3 id="Hexo-themes"><a href="#Hexo-themes" class="headerlink" title="Hexo themes"></a>Hexo themes</h3><p>Hexo có rất nhiều <a target="_blank" rel="noopener" href="https://hexo.io/themes/">themes</a> với nhiều chủ đề khác nhau được viết bởi các lập trình viên trên toàn thế giới. Nếu muốn bạn cũng có thể tự tạo cho mình một theme và chia sẻ nó với người khác. Mình sẽ dùng <a target="_blank" rel="noopener" href="https://github.com/yanm1ng/hexo-theme-vexo">Vexo</a> để làm mới giao diện cho blog.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;your-hexo-folder&gt;</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo</span><br><span class="line">$ cp -R themes/vexo/_source/* <span class="built_in">source</span>/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;your-hexo-folder&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo</span><br><span class="line">cp -R themes/vexo/_source/* <span class="built_in">source</span>/</span><br></pre></td></tr></table></figure>
 
 <p>Vexo sẽ được clone trong thư mục <code>/theme/vexo</code> với cấu trúc:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── languages</span><br><span class="line">├── layout</span><br><span class="line">├── scripts</span><br><span class="line">└── source</span><br></pre></td></tr></table></figure>
@@ -173,17 +173,17 @@
 <p> Tại bước này bạn có thể truy cập vào trang <code>&lt;github-username&gt;.github.io</code>. Tất nhiên chúng ta sẽ nhận được một lỗi <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/HTTP_404">404 Not Found</a> vì repository hiện tại chưa chứa bất kỳ static web nào cả. </p>
 <p> <img src="/image/github-pages-not-found.png" alt="Github Pages Not Found"></p>
 <p> Nhiệm vụ tiếp theo là generate các static file và deploy chúng.</p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>Các static file bao gồm html, css, js, image… sẽ tự động được tạo ra trong thư mục <code>/public</code></p>
-<h3 id="Deploy-to-Github-Pages"><a href="#Deploy-to-Github-Pages" class="headerlink" title="Deploy to Github Pages"></a>Deploy to Github Pages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-Github-Pages"><a href="#Deploy-to-Github-Pages" class="headerlink" title="Deploy to Github Pages"></a>Deploy to Github Pages</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>Thêm một thư mục mới được tạo ra là <code>/.deploy_git</code>. Đây chính là thư mục chứa remote origin của repository mà chúng ta đã tạo. Tại bước này bạn đã có thể xem blog của mình bằng cách truy cập vào trang <code>&lt;github-username&gt;.github.io</code>.</p>
 <blockquote>
 <p>Quá trình deploy thường sẽ mất một khoảng thời gian nhỏ nên đừng lo lắng khi thấy blog của bạn không hiển thị ngay lập tức.</p>
 </blockquote>
 <p>Sau tất cả các bước trên chúng ta đã có một trang cá nhân hoàn chỉnh. Từ đây mỗi khi muốn cập nhật blog của mình, bạn chỉ cần chạy Command-line.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <h2 id="Tong-Ket"><a href="#Tong-Ket" class="headerlink" title="Tổng Kết"></a>Tổng Kết</h2><p>Như vậy chỉ với các Command-line, trong thời gian ngắn chúng ra đã có thể tạo ra một trang web hoàn chỉnh. Hy vọng bài viết này có ích với bạn. Nếu gặp khó khăn trong quá trình cài đặt hãy liên hệ <a href="/about">Wolf</a> để được giúp đỡ.</p>
 </section>
